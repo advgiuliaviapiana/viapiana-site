@@ -69,12 +69,47 @@ h2 { font-weight: normal; font-size: clamp(30px, 3.6vw, 45px); line-height: 1.15
 footer { padding: 25px 8vw; background: var(--navy); color: var(--cream); display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font: 11px/1.6 var(--body-font); }
 footer p { margin: 0; }
 @media (max-width: 760px) { .header { align-items: flex-start; flex-wrap: wrap; padding: 20px 6vw; } nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 4px; gap: 17px; } .hero { grid-template-columns: 1fr; padding: 58px 7vw; gap: 15px; } .compass-art { min-height: 180px; } .compass { width: 180px; } .compass-inner { font-size: 56px; } .section { padding: 55px 7vw; } .services, .about, .contact { grid-template-columns: 1fr; gap: 26px; } .articles { grid-template-columns: 1fr; } .service { padding: 22px; min-height: unset; } .topbar { padding: 10px 6vw; } }
-.brand-logo {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  min-width: 210px;
+}
+
+.mark {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mark img {
   display: block;
-  width: 220px;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 22px;
+  letter-spacing: .12em;
+}
+
+.brand-sub {
+  font: 9px/1.5 Arial, sans-serif;
+  letter-spacing: .08em;
+  margin-top: 4px;
 }
 </style>
 </head>
@@ -82,7 +117,13 @@ footer p { margin: 0; }
 <div class="site">
   <header class="header">
 <a class="brand" href="#inicio" aria-label="Viapiana, início">
-  <img src="./logo-viapiana.png" alt="Viapiana — Advocacia e Assessoria Jurídica" class="brand-logo">
+  <span class="mark">
+    <img src="./logo-viapiana.png" alt="Logo Viapiana">
+  </span>
+  <span class="brand-copy">
+    <span class="brand-name">VIAPIANA</span>
+    <span class="brand-sub" data-pt="ADVOCACIA E ASSESSORIA JURÍDICA" data-en="LAW & LEGAL ADVISORY">ADVOCACIA E ASSESSORIA JURÍDICA</span>
+  </span>
 </a>
 </a>
     <nav aria-label="Navegação principal"><a href="#atuacao" data-pt="Atuação" data-en="Practice">Atuação</a><a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a><a href="#artigos" data-pt="Artigos" data-en="Insights">Artigos</a><a href="#contato" data-pt="Contato" data-en="Contact">Contato</a><button class="lang" id="langToggle" type="button">EN</button></nav>
