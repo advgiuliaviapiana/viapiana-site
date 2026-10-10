@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Viapiana | Advocacia e Assessoria Jurídica. Consultoria jurídica no Brasil e no exterior em Direito de Família e Sucessões, Direito Internacional, Direito Migratório e Direito Civil.">
+<title>Viapiana | Advocacia e Assessoria Jurídica</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+:root { color-scheme: light; --navy: #000033; --navy-2: #000033; --cream: #f4f0e8; --paper: #f4f0e8; --ink: #000033; --muted: #4f4b5b; --line: #d8d0bf; --gold: #c39b41; --title-font: Georgia, 'Times New Roman', serif; --body-font: 'Poppins', Arial, sans-serif; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--body-font); background: var(--paper); color: var(--ink); }
+button, a { font: inherit; }
+a { color: inherit; }
+.site { min-height: 100vh; background: var(--paper); }
+.topbar { padding: 12px 6vw; display: flex; justify-content: space-between; gap: 16px; align-items: center; background: var(--navy); color: var(--cream); font: 12px/1.5 Arial, sans-serif; letter-spacing: .08em; }
+.topbar a { text-decoration: none; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 24px 6vw; border-bottom: 1px solid light-dark(var(--line), #3b4851); gap: 20px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 210px; }
+.mark { width: 42px; height: 42px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; color: var(--gold); font-size: 24px; }
+.brand-name { font-family: var(--title-font); font-size: 22px; letter-spacing: .12em; }
+.brand-sub { font: 9px/1.5 Arial, sans-serif; letter-spacing: .11em; margin-top: 4px; }
+nav { display: flex; gap: 22px; align-items: center; font: 12px var(--body-font); }
+nav a { text-decoration: none; opacity: .85; }
+nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 5px; }
+.lang { border: 1px solid light-dark(var(--line), #53606a); background: transparent; color: inherit; padding: 8px 10px; cursor: pointer; font: 11px Arial, sans-serif; }
+.hero { background: var(--navy); color: var(--cream); padding: 82px 8vw 76px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 50px; align-items: center; }
+.kicker { color: #d3c3a4; font: 11px Arial, sans-serif; text-transform: uppercase; letter-spacing: .18em; margin: 0 0 22px; }
+h1, h2, .service h3, .article h3 { font-family: var(--title-font); font-weight: normal; }
+h1 { font-size: clamp(38px, 5vw, 68px); line-height: 1.05; max-width: 780px; margin: 0 0 24px; }
+.hero p { font-family: var(--body-font); font-size: 18px; line-height: 1.65; max-width: 630px; color: var(--cream); margin: 0 0 30px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button { display: inline-block; text-decoration: none; padding: 14px 19px; font: 12px Arial, sans-serif; letter-spacing: .04em; border: 1px solid var(--gold); }
+.button.primary { background: var(--cream); color: var(--navy); }
+.button.secondary { color: var(--cream); }
+.compass-art { display: grid; place-items: center; min-height: 260px; }
+.compass { width: min(270px, 100%); aspect-ratio: 1; border: 1px solid #6e7d88; border-radius: 50%; display: grid; place-items: center; position: relative; color: var(--gold); }
+.compass:before, .compass:after { content: ''; position: absolute; background: #6e7d88; }
+.compass:before { height: 84%; width: 1px; }
+.compass:after { width: 84%; height: 1px; }
+.compass-inner { border: 1px solid var(--gold); width: 68%; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; z-index: 1; background: var(--navy); font-size: 82px; }
+.section { padding: 76px 8vw; }
+.section-head { max-width: 720px; margin-bottom: 34px; }
+.eyebrow { color: var(--gold); font: 11px var(--body-font); text-transform: uppercase; letter-spacing: .17em; margin: 0 0 14px; }
+h2 { font-weight: normal; font-size: clamp(30px, 3.6vw, 45px); line-height: 1.15; margin: 0 0 18px; }
+.lead { font-family: var(--body-font); font-size: 17px; line-height: 1.75; color: var(--muted); margin: 0; }
+.services { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.service { padding: 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); min-height: 220px; }
+.number { color: var(--gold); font: 11px var(--body-font); letter-spacing: .12em; }
+.service h3 { font-size: 25px; margin: 20px 0 12px; }
+.service p { color: var(--muted); font: 15px/1.65 var(--body-font); margin: 0 0 18px; }
+.text-link { color: var(--navy); text-decoration: none; font: 12px var(--body-font); border-bottom: 1px solid var(--gold); padding-bottom: 4px; }
+.about { background: var(--cream); display: grid; grid-template-columns: .75fr 1.25fr; gap: 70px; align-items: start; }
+.about-card { border: 1px solid var(--gold); padding: 28px; min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; }
+.about-card .monogram { font-family: var(--title-font); font-size: 70px; color: var(--gold); }
+.about-card p { font: 11px/1.6 Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; margin: 0; }
+.about-copy p { color: var(--muted); font: 16px/1.8 var(--body-font); }
+.about-copy .disclaimer { font: 12px/1.6 Arial, sans-serif; border-left: 2px solid var(--gold); padding-left: 14px; }
+.articles { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.article { padding: 24px; border: 1px solid var(--line); min-height: 205px; display: flex; flex-direction: column; align-items: flex-start; }
+.article small { font: 10px var(--body-font); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+.article h3 { font-size: 22px; line-height: 1.25; margin: 18px 0; }
+.article span { margin-top: auto; font: 11px var(--body-font); color: var(--muted); }
+.contact { background: var(--navy); color: var(--cream); display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+.contact .lead { color: var(--cream); }
+.contact-details { display: flex; flex-direction: column; gap: 15px; font: 14px/1.6 var(--body-font); }
+.contact-details a { color: var(--cream); text-decoration-color: var(--gold); text-underline-offset: 4px; }
+footer { padding: 25px 8vw; background: var(--navy); color: var(--cream); display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font: 11px/1.6 var(--body-font); }
+footer p { margin: 0; }
+@media (max-width: 760px) { .header { align-items: flex-start; flex-wrap: wrap; padding: 20px 6vw; } nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 4px; gap: 17px; } .hero { grid-template-columns: 1fr; padding: 58px 7vw; gap: 15px; } .compass-art { min-height: 180px; } .compass { width: 180px; } .compass-inner { font-size: 56px; } .section { padding: 55px 7vw; } .services, .about, .contact { grid-template-columns: 1fr; gap: 26px; } .articles { grid-template-columns: 1fr; } .service { padding: 22px; min-height: unset; } .topbar { padding: 10px 6vw; } }
+</style>
+</head>
+<body>
+<div class="site">
+  <div class="topbar"><span data-pt="ATUAÇÃO NO DIREITO BRASILEIRO E INTERNACIONAL" data-en="LEGAL SERVICES IN BRAZIL AND INTERNATIONAL MATTERS">ATUAÇÃO NO DIREITO BRASILEIRO E INTERNACIONAL</span><a href="#contato" data-pt="FALE CONOSCO ↗" data-en="CONTACT ↗">FALE CONOSCO ↗</a></div>
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="Viapiana, início"><span class="mark">✧</span><span><span class="brand-name">VIAPIANA</span><br><span class="brand-sub" data-pt="ADVOCACIA E ASSESSORIA JURÍDICA" data-en="LEGAL COUNSEL & ADVISORY">ADVOCACIA E ASSESSORIA JURÍDICA</span></span></a>
+    <nav aria-label="Navegação principal"><a href="#atuacao" data-pt="Atuação" data-en="Practice">Atuação</a><a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a><a href="#artigos" data-pt="Artigos" data-en="Insights">Artigos</a><a href="#contato" data-pt="Contato" data-en="Contact">Contato</a><button class="lang" id="langToggle" type="button">EN</button></nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div><p class="kicker" data-pt="Advocacia · Assessoria jurídica" data-en="Legal Counsel · Advisory">Advocacia · Assessoria jurídica</p><h1 data-pt="Atuação jurídica no Brasil e no exterior" data-en="Legal services in Brazil and abroad">Atuação jurídica no Brasil e no exterior</h1><p data-pt="Atuação jurídica em questões brasileiras e internacionais, para pessoas no Brasil e no exterior — com informação, estratégia e atenção a cada caso." data-en="Legal services in Brazilian and international matters for people in Brazil and abroad — with clarity, strategy and attention to each case.">Atuação jurídica em questões brasileiras e internacionais, para pessoas no Brasil e no exterior — com informação, estratégia e atenção a cada caso.</p><div class="actions"><a class="button primary" href="#atuacao" data-pt="Conheça nossa atuação" data-en="Explore our practice">Conheça nossa atuação</a><a class="button secondary" href="#contato" data-pt="Entre em contato" data-en="Get in touch">Entre em contato</a></div></div>
+      <div class="compass-art" aria-hidden="true"><div class="compass"><div class="compass-inner">✧</div></div></div>
+    </section>
+    <section class="section" id="atuacao"><div class="section-head"><p class="eyebrow" data-pt="Áreas de atuação" data-en="Practice areas">Áreas de atuação</p><h2 data-pt="Orientação jurídica para diferentes momentos e relações." data-en="Legal guidance for different moments and relationships.">Orientação jurídica para diferentes momentos e relações.</h2><p class="lead" data-pt="Atendimento em demandas nacionais e em situações que envolvem mais de um país." data-en="Services for individuals in domestic matters and situations involving more than one country.">Atendimento em demandas nacionais e em situações que envolvem mais de um país.</p></div>
+      <div class="services">
+        <article class="service"><span class="number">01 / FAMÍLIA</span><h3 data-pt="Direito de Família e Sucessões" data-en="Family & Succession Law">Direito de Família e Sucessões</h3><p data-pt="Casamento, divórcio, inventários, pactos antenupciais e reconhecimento de união estável, inclusive em contextos internacionais." data-en="Marriage, divorce, support, inheritance and succession, including international contexts.">Casamento, divórcio, inventários, pactos antenupciais e reconhecimento de união estável, inclusive em contextos internacionais.</p><a class="text-link" href="#contato" data-pt="Saiba mais ↗" data-en="Learn more ↗">Saiba mais ↗</a></article>
+        <article class="service"><span class="number">02 / INTERNACIONAL</span><h3 data-pt="Direito Internacional" data-en="International Law">Direito Internacional</h3><p data-pt="Legalização de certidões, casamento e divórcio internacionais, homologação de decisão estrangeira junto ao STJ e demais questões internacionais." data-en="Legalization of certificates, international marriage and divorce, recognition of foreign judgments before Brazil’s Superior Court of Justice (STJ), and other international legal matters.">Legalização de certidões, casamento e divórcio internacionais, homologação de decisão estrangeira junto ao STJ e demais questões internacionais.</p><a class="text-link" href="#contato" data-pt="Saiba mais ↗" data-en="Learn more ↗">Saiba mais ↗</a></article>
+        <article class="service"><span class="number">03 / MIGRAÇÃO</span><h3 data-pt="Direito Migratório" data-en="Immigration Law">Direito Migratório</h3><p data-pt="Vistos, autorização de residência, nacionalidade e regularização migratória no Brasil." data-en="Visas, residence authorization, nationality and immigration services in Brazil.">Vistos, autorização de residência, nacionalidade e regularização migratória no Brasil.</p><a class="text-link" href="#contato" data-pt="Saiba mais ↗" data-en="Learn more ↗">Saiba mais ↗</a></article>
+        <article class="service"><span class="number">04 / CIVIL</span><h3 data-pt="Direito Civil" data-en="Civil Law">Direito Civil</h3><p data-pt="Assessoria em questões civis para pessoas físicas, conforme as particularidades de cada demanda." data-en="Advice on civil and contractual matters for individuals, tailored to each case.">Assessoria em questões civis para pessoas físicas, conforme as particularidades de cada demanda.</p><a class="text-link" href="#contato" data-pt="Saiba mais ↗" data-en="Learn more ↗">Saiba mais ↗</a></article>
+      </div>
+    </section>
+    <section class="section about" id="sobre"><div class="about-card"><span class="monogram">V.</span><p data-pt="Conhecimento jurídico · Perspectiva internacional" data-en="Legal knowledge · International perspective">Conhecimento jurídico · Perspectiva internacional</p></div><div class="about-copy"><p class="eyebrow" data-pt="Sobre a Viapiana" data-en="About Viapiana">Sobre a Viapiana</p><h2 data-pt="Uma perspectiva jurídica atenta às conexões entre pessoas, países e direitos." data-en="A legal perspective attentive to the connections between people, countries and rights.">Uma perspectiva jurídica atenta às conexões entre pessoas, países e direitos.</h2><p data-pt="A atuação é conduzida por Giulia Viapiana, advogada e mestre em Relações Internacionais, com formação especializada em Direito Internacional. O trabalho combina análise jurídica, compreensão do contexto e comunicação clara para pessoas que precisam lidar com questões legais no Brasil ou entre diferentes países." data-en="The practice is led by Giulia Viapiana, an attorney with a master's degree in International Relations and specialized in International Law. The work combines legal analysis, context and clear communication for people navigating legal matters in Brazil or across borders.">A atuação é conduzida por Giulia Viapiana, advogada e mestre em Relações Internacionais, com formação especializada em Direito Internacional. O trabalho combina análise jurídica, compreensão do contexto e comunicação clara para pessoas que precisam lidar com questões legais no Brasil ou entre diferentes países.</p><p class="disclaimer" data-pt="As informações deste site têm caráter geral e não substituem a análise jurídica individual de cada caso." data-en="The information on this website is general and does not replace individualized legal advice.">As informações deste site têm caráter geral e não substituem a análise jurídica individual de cada caso.</p></div></section>
+    <section class="section" id="artigos"><div class="section-head"><p class="eyebrow" data-pt="Conteúdo jurídico" data-en="Legal insights">Conteúdo jurídico</p><h2 data-pt="Informação para tomar decisões mais conscientes." data-en="Information to support informed decisions.">Informação para tomar decisões mais conscientes.</h2><p class="lead" data-pt="Uma área para publicar artigos e respostas a dúvidas frequentes, com conteúdo informativo e atualizado." data-en="A place for articles and answers to common questions, with informative and updated content.">Uma área para publicar artigos e respostas a dúvidas frequentes, com conteúdo informativo e atualizado.</p></div><div class="articles"><article class="article"><small data-pt="Direito Internacional" data-en="International Law">Direito Internacional</small><h3 data-pt="Casei no exterior. Como funciona o divórcio no Brasil?" data-en="Married abroad: how does divorce work in Brazil?">Casei no exterior. Como funciona o divórcio no Brasil?</h3><span data-pt="Artigo a publicar" data-en="Article to come">Artigo a publicar</span></article><article class="article"><small data-pt="Direito Migratório" data-en="Immigration Law">Direito Migratório</small><h3 data-pt="Quais são as opções para morar legalmente no Brasil?" data-en="What are the options for living legally in Brazil?">Quais são as opções para morar legalmente no Brasil?</h3><span data-pt="Artigo a publicar" data-en="Article to come">Artigo a publicar</span></article><article class="article"><small data-pt="Documentos" data-en="Documents">Documentos</small><h3 data-pt="Como usar documentos estrangeiros no Brasil?" data-en="How can foreign documents be used in Brazil?">Como usar documentos estrangeiros no Brasil?</h3><span data-pt="Artigo a publicar" data-en="Article to come">Artigo a publicar</span></article></div></section>
+    <section class="section contact" id="contato"><div><p class="eyebrow" data-pt="Contato" data-en="Contact">Contato</p><h2 data-pt="Vamos entender sua questão jurídica." data-en="Let's discuss your legal matter.">Vamos entender sua questão jurídica.</h2><p class="lead" data-pt="Entre em contato para apresentar sua demanda e receber informações sobre as possibilidades de atendimento." data-en="Get in touch to explain your matter and learn about available consultation options.">Entre em contato para apresentar sua demanda e receber informações sobre as possibilidades de atendimento.</p></div><div class="contact-details"><p><strong data-pt="Advogada responsável" data-en="Lawyer">Advogada responsável</strong><br>Giulia Viapiana · OAB/RS [128.111]</p><p><strong data-pt="E-mail" data-en="Email">E-mail</strong><br><a href="mailto:[advgiuliaviapiana@gmail.com]">[advgiuliaviapiana@gmail.com]</a></p><p><strong>WhatsApp</strong><br><a href="#" aria-label="https://wa.me/5553981261358">[https://wa.me/5553981261358]</a></p><p data-pt="Atendimento presencial e remoto, conforme a natureza da demanda." data-en="In-person and remote services, depending on the matter.">Atendimento presencial e remoto, conforme a natureza da demanda.</p></div></section>
+  </main>
+  <footer><p>© <span id="year"></span> Viapiana | Advocacia e Assessoria Jurídica</p><p data-pt="Conteúdo informativo. Cada caso exige análise individual." data-en="Informational content. Each matter requires individual assessment.">Conteúdo informativo. Cada caso exige análise individual.</p></footer>
+</div>
+<script>
+const toggle = document.getElementById('langToggle');
+let lang = 'pt';
+toggle.addEventListener('click', () => {
+  lang = lang === 'pt' ? 'en' : 'pt';
+  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+  document.querySelectorAll('[data-pt][data-en]').forEach(el => { el.textContent = el.dataset[lang]; });
+  toggle.textContent = lang === 'pt' ? 'EN' : 'PT';
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
